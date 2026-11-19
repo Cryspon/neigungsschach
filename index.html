@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Neigungsschach</title>
+<link rel="stylesheet" href="style.css?v=7">
+<script type="module" src="game.mjs?v=7"></script>
+</head>
+<body>
+<main>
+<header><h1>Neigungsschach<span>.</span></h1><p>Matt in zwei weißen Zügen. Das Brett kippt mit.</p></header>
+<nav aria-label="Rätsel"></nav>
+<div class="layout">
+<section aria-label="Schachbrett">
+<div id="board" aria-label="Spielbrett"></div>
+<p id="fallen"></p>
+</section>
+<section class="panel">
+<h2 id="stage">Weiß am Zug</h2>
+<p id="status" role="status"></p>
+<div class="tilts" aria-label="Brett kippen">
+<button data-direction="left" aria-label="Links kippen">←</button>
+<button data-direction="up" aria-label="Nach oben kippen">↑</button>
+<button data-direction="down" aria-label="Nach unten kippen">↓</button>
+<button data-direction="right" aria-label="Rechts kippen">→</button>
+<button id="confirm" disabled>Kippen bestätigen</button>
+<button id="skip">Ohne Kippen</button>
+</div>
+<p id="preview-text" role="status"></p>
+<div class="actions">
+<button id="undo" disabled>Rückgängig</button>
+<button id="sensor" aria-pressed="false">Handy-Neigung aktivieren</button>
+<button id="retry">Neu starten</button>
+<button id="hint">Hinweis</button>
+<button id="next" hidden>Nächstes Rätsel</button>
+</div>
+<p id="sensor-status" role="status"></p>
+<p id="hint-text" role="status"></p>
+<details><summary>Kippregeln</summary><p>Nach einem weißen Zug darfst du einmal kippen. Alle Figuren einschließlich der Könige rutschen gleichzeitig bis zu ein Feld bergab. Besetzte Felder blockieren. Figuren am offenen Rand fallen vom Brett. Würde dabei ein König herausfallen, ist diese Kipprichtung unzulässig. Dein König muss nach Zug und Kippbewegung sicher sein. Könige dürfen niemals nebeneinander stehen. Schwarz zieht ohne zu kippen. Mit den Pfeilen siehst du zunächst eine Vorschau; bestätige sie anschließend. Die Handy-Neigung führt die Bewegung direkt aus. Alle zehn Rätsel sind Matt in zwei, ohne ansteigende Lernstufen.</p></details>
+</section>
+</div>
+</main>
+</body>
+</html>
